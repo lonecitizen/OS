@@ -45,9 +45,9 @@ release_and_exit:
 }
 
 static void release_argv(int argc, char*** argv) {
-//  for (int i = 0; i < argc; ++i) {
-//    free((*argv)[i]);
-//  }
+  for (int i = 0; i < argc; ++i) {
+    free((*argv)[i]);
+  }
   free(*argv);
   *argv = NULL;
 }
